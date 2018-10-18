@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.jsd</groupId>
+    <artifactId>commont_parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.jsd.bos</groupId>
+  <artifactId>bos_parent</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>bos_web</module>
+  	<module>bos_utils</module>
+  	<module>bos_domain</module>
+  	<module>bos_dao</module>
+  	<module>bos_service</module>
+  </modules>
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<!-- /表示跟路径: 相当于 tomcat/webapps/ROOT/ -->
+					<path>/</path>
+					<port>8888</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
